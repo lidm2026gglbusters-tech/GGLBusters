@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BUSTER CLUB — Berkumpul, Berkarya, Bikin Bising yang Baik</title>
+
+<!-- Tailwind via CDN (bukan API — Tailwind adalah utility CSS framework) -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          cream: '#FFF8EC',
+          teal: '#1B4B43',
+          coral: '#FF6B4A',
+          golden: '#FFC145',
+          leaf: '#4CAF7D',
+          berry: '#E85D75',
+        },
+        fontFamily: {
+          display: ['Fredoka', 'sans-serif'],
+          body: ['Plus Jakarta Sans', 'sans-serif'],
+        }
+      }
+    }
+  }
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="font-body bg-cream text-teal antialiased">
+
+<!-- ============ NAVBAR ============ -->
+<header class="sticky top-0 z-50 bg-cream/90 backdrop-blur-sm border-b border-teal/10">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="#" class="flex items-center gap-2 group">
+      <!-- LOGO placeholder: ganti src di bawah dengan logo asli -->
+      <img id="site-logo" src="img/logo-placeholder.svg" alt="Logo Buster Club"
+           class="h-10 w-10 rounded-full object-cover border-2 border-teal/10 cursor-pointer"
+           title="Klik untuk ganti logo (lihat script.js)">
+      <span class="font-display font-700 text-lg tracking-tight">BUSTER CLUB</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+      <a href="#tentang" class="hover:text-coral transition-colors">Tentang</a>
+      <a href="#edukasi" class="hover:text-coral transition-colors">Edukasi</a>
+      <a href="#karya" class="hover:text-coral transition-colors">Karya</a>
+      <a href="#galeri" class="hover:text-coral transition-colors">Galeri</a>
+      <a href="#anggota" class="hover:text-coral transition-colors">Anggota</a>
+      <a href="#kritik" class="hover:text-coral transition-colors">Kritik &amp; Saran</a>
+    </nav>
+    <a href="#karya" class="bg-coral text-white text-sm font-semibold px-5 py-2.5 rounded-full hover:bg-coral/90 transition-colors">
+      Lihat karya
+    </a>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="relative overflow-hidden">
+  <div class="max-w-6xl mx-auto px-6 pt-16 pb-24 grid md:grid-cols-2 gap-12 items-center">
+    <div class="relative z-10">
+      <span class="inline-block bg-golden/30 text-teal text-xs font-semibold tracking-wide px-3 py-1 rounded-full mb-5">
+        Publikasi Komunitas · Edisi 2026
+      </span>
+      <h1 class="font-display font-600 text-4xl md:text-5xl leading-tight mb-5">
+        Berkumpul, Berkarya, Bikin Bising yang Baik.
+      </h1>
+      <p class="text-teal/70 text-base md:text-lg mb-8 max-w-md">
+        BUSTER CLUB adalah ruang publikasi seru untuk ide, karya, dan cerita yang menggerakkan lingkungan sekitar — kali ini bicara soal ketahanan pangan.
+      </p>
+      <div class="flex flex-wrap gap-3">
+        <a href="#karya" class="bg-coral text-white font-semibold px-6 py-3 rounded-full hover:bg-coral/90 transition-colors">
+          Lihat karya terbaru
+        </a>
+        <a href="#edukasi" class="border-2 border-teal/20 font-semibold px-6 py-3 rounded-full hover:border-teal/40 transition-colors">
+          Belajar gizi seru
+        </a>
+      </div>
+    </div>
+
+    <!-- Ilustrasi karakter memasak (flat illustration, SVG asli) -->
+    <div class="relative flex justify-center">
+      <div class="hero-blob absolute inset-0 -z-10"></div>
+      <img src="img/hero-cooking-illustration.svg" alt="Ilustrasi karakter sedang memasak"
+           class="w-full max-w-sm floaty">
+    </div>
+  </div>
+</section>
+
+<!-- ============ TENTANG KAMI ============ -->
+<section id="tentang" class="bg-white/60 py-20 relative">
+  <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-14 items-center">
+    <div class="relative flex justify-center order-2 md:order-1">
+      <div class="relative w-64 h-64">
+        <div class="w-full h-full rounded-full bg-leaf flex items-center justify-center text-white text-center font-display font-600 text-xl leading-snug px-6">
+          IDE<br>UNTUK<br>SEMUA
+        </div>
+        <!-- badge ikon gizi mengelilingi lingkaran -->
+        <div class="nutri-badge bg-golden" style="top:-14px; left:50%; transform:translateX(-50%);" title="Vitamin">🍊 Vitamin</div>
+        <div class="nutri-badge bg-berry text-white" style="bottom:6px; right:-30px;" title="Protein">🥚 Protein</div>
+        <div class="nutri-badge bg-coral text-white" style="bottom:6px; left:-30px;" title="Kalsium">🥛 Kalsium</div>
+        <div class="nutri-badge bg-white border-2 border-leaf" style="top:40%; right:-46px;" title="Karbohidrat">🌾 Karbo</div>
+      </div>
+    </div>
+    <div class="order-1 md:order-2">
+      <span class="text-coral font-semibold text-sm tracking-wide">TENTANG KAMI</span>
+      <h2 class="font-display font-600 text-3xl mt-2 mb-4">Edukasi dan sosialisasi yang terasa dekat.</h2>
+      <p class="text-teal/70 leading-relaxed">
+        Kami mengemas isu sehari-hari — termasuk ketahanan pangan dan gizi seimbang — menjadi publikasi yang ringan, visual, dan mudah dibagikan, supaya obrolan penting bisa sampai ke lebih banyak orang.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EDUKASI ============ -->
+<section id="edukasi" class="py-20">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="mb-12 max-w-lg">
+      <span class="text-leaf font-semibold text-sm tracking-wide">EDUKASI</span>
+      <h2 class="font-display font-600 text-3xl mt-2">Materi singkat, gampang dicerna.</h2>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+
+      <article class="edu-card">
+        <div class="edu-icon bg-golden/25">🥦</div>
+        <h3 class="font-display font-600 text-lg mt-4 mb-2">Materi 1</h3>
+        <p class="text-sm text-teal/70">Ganti judul dan isi sesuai topik gizi atau ketahanan pangan yang mau kamu bahas.</p>
+      </article>
+
+      <article class="edu-card">
+        <div class="edu-icon bg-coral/20">🍚</div>
+        <h3 class="font-display font-600 text-lg mt-4 mb-2">Materi 2</h3>
+        <p class="text-sm text-teal/70">Ganti judul dan isi sesuai topik gizi atau ketahanan pangan yang mau kamu bahas.</p>
+      </article>
+
+      <article class="edu-card">
+        <div class="edu-icon bg-leaf/20">🥛</div>
+        <h3 class="font-display font-600 text-lg mt-4 mb-2">Materi 3</h3>
+        <p class="text-sm text-teal/70">Ganti judul dan isi sesuai topik gizi atau ketahanan pangan yang mau kamu bahas.</p>
+      </article>
+
+      <article class="edu-card">
+        <div class="edu-icon bg-berry/20">🍎</div>
+        <h3 class="font-display font-600 text-lg mt-4 mb-2">Materi 4</h3>
+        <p class="text-sm text-teal/70">Ganti judul dan isi sesuai topik gizi atau ketahanan pangan yang mau kamu bahas.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ HIGHLIGHT KARYA (1 item) ============ -->
+<section id="karya" class="bg-white/60 py-20">
+  <div class="max-w-4xl mx-auto px-6">
+    <div class="mb-10">
+      <span class="text-berry font-semibold text-sm tracking-wide">HIGHLIGHT KARYA</span>
+      <h2 class="font-display font-600 text-3xl mt-2">Karya yang lagi ramai dibicarakan.</h2>
+    </div>
+    <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-teal/5 grid md:grid-cols-2">
+      <div class="aspect-[4/3] md:aspect-auto overflow-hidden">
+        <img src="img/karya-utama.svg" alt="Poster Kota Kita" class="w-full h-full object-cover">
+      </div>
+      <div class="p-8 flex flex-col justify-center">
+        <span class="star-rating text-golden text-lg mb-3" aria-label="Rating 4 dari 5">★★★★☆</span>
+        <h3 class="font-display font-600 text-2xl mb-3">Poster Kota Kita</h3>
+        <p class="text-teal/70 text-sm leading-relaxed">
+          Karya kolaborasi anggota yang mengangkat cerita ketahanan pangan lewat visual jalanan — dipilih komunitas sebagai karya paling banyak dibicarakan bulan ini.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALERI AKTIVITAS ============ -->
+<section id="galeri" class="py-20">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="mb-10 flex items-end justify-between flex-wrap gap-3">
+      <div>
+        <span class="text-golden font-semibold text-sm tracking-wide">GALERI AKTIVITAS</span>
+        <h2 class="font-display font-600 text-3xl mt-2">Momen dari lapangan.</h2>
+      </div>
+      <p class="text-xs text-teal/50 max-w-xs">
+        Galeri ini otomatis dimuat dari <code class="bg-teal/5 px-1.5 py-0.5 rounded">img/manifest.json</code> — tambah foto baru cukup edit file itu.
+      </p>
+    </div>
+    <div id="gallery-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- diisi otomatis oleh script.js -->
+    </div>
+  </div>
+</section>
+
+<!-- ============ ANGGOTA ============ -->
+<section id="anggota" class="bg-leaf py-20 text-white">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="mb-12">
+      <span class="text-white/70 font-semibold text-sm tracking-wide">ANGGOTA</span>
+      <h2 class="font-display font-600 text-3xl mt-2">Orang-orang baik di balik bising ini.</h2>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-5 gap-5">
+
+      <div class="member-card member-card--featured">
+        <img src="img/member-featured.svg" alt="Foto Raka" class="member-photo">
+        <div class="member-info">
+          <p class="font-display font-600">Raka Pramana</p>
+          <p class="text-sm text-white/80">Ketua Komunitas</p>
+          <p class="text-xs text-white/60">Ilmu Gizi</p>
+        </div>
+      </div>
+
+      <div class="member-card">
+        <img src="img/member-1.svg" alt="Foto Sasa" class="member-photo">
+        <div class="member-info">
+          <p class="font-display font-600 text-sm">Sasa</p>
+          <p class="text-xs text-white/80">Editor</p>
+          <p class="text-[11px] text-white/60">Sastra Indonesia</p>
+        </div>
+      </div>
+
+      <div class="member-card">
+        <img src="img/member-2.svg" alt="Foto Nino" class="member-photo">
+        <div class="member-info">
+          <p class="font-display font-600 text-sm">Nino</p>
+          <p class="text-xs text-white/80">Riset</p>
+          <p class="text-[11px] text-white/60">Kesehatan Masyarakat</p>
+        </div>
+      </div>
+
+      <div class="member-card">
+        <img src="img/member-3.svg" alt="Foto Alya" class="member-photo">
+        <div class="member-info">
+          <p class="font-display font-600 text-sm">Alya</p>
+          <p class="text-xs text-white/80">Komunitas</p>
+          <p class="text-[11px] text-white/60">Ilmu Komunikasi</p>
+        </div>
+      </div>
+
+      <div class="member-card">
+        <img src="img/member-4.svg" alt="Foto Dimas" class="member-photo">
+        <div class="member-info">
+          <p class="font-display font-600 text-sm">Dimas</p>
+          <p class="text-xs text-white/80">Desain</p>
+          <p class="text-[11px] text-white/60">DKV</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ ROADMAP INOVASI ============ -->
+<section id="roadmap" class="py-24">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="mb-16 max-w-lg">
+      <span class="text-coral font-semibold text-sm tracking-wide">ROADMAP INOVASI</span>
+      <h2 class="font-display font-600 text-3xl mt-2">Rencana kami ke depan.</h2>
+    </div>
+
+    <div class="roadmap">
+      <div class="roadmap-line"></div>
+
+      <div class="roadmap-step">
+        <div class="roadmap-dot bg-coral"></div>
+        <p class="roadmap-label">Tahap 1</p>
+        <h3 class="font-display font-600 text-lg my-1">Riset Komunitas</h3>
+        <p class="text-sm text-teal/70">Mengumpulkan isu ketahanan pangan yang paling relevan di sekitar kampus.</p>
+      </div>
+
+      <div class="roadmap-step">
+        <div class="roadmap-dot bg-golden"></div>
+        <p class="roadmap-label">Tahap 2</p>
+        <h3 class="font-display font-600 text-lg my-1">Produksi Konten</h3>
+        <p class="text-sm text-teal/70">Mengubah hasil riset jadi poster, zine, dan artikel yang mudah dibagikan.</p>
+      </div>
+
+      <div class="roadmap-step">
+        <div class="roadmap-dot bg-leaf"></div>
+        <p class="roadmap-label">Tahap 3</p>
+        <h3 class="font-display font-600 text-lg my-1">Sosialisasi</h3>
+        <p class="text-sm text-teal/70">Menyebarkan publikasi lewat acara komunitas dan media sosial.</p>
+      </div>
+
+      <div class="roadmap-step">
+        <div class="roadmap-dot bg-berry"></div>
+        <p class="roadmap-label">Tahap 4</p>
+        <h3 class="font-display font-600 text-lg my-1">Evaluasi &amp; Kolaborasi</h3>
+        <p class="text-sm text-teal/70">Mengumpulkan masukan publik dan membuka ruang kolaborasi baru.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ARTIKEL ============ -->
+<section id="artikel" class="bg-white/60 py-20">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="mb-10">
+      <span class="text-berry font-semibold text-sm tracking-wide">ARTIKEL TERBARU</span>
+      <h2 class="font-display font-600 text-3xl mt-2">Cerita yang pantas diteruskan.</h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+
+      <a href="#" class="article-card">
+        <img src="img/artikel-1.svg" alt="" class="article-thumb">
+        <p class="text-xs text-teal/50 mt-4">18 SEP 2026</p>
+        <h3 class="font-display font-600 text-base mt-1">Cara Bikin Ruang Diskusi yang Aman</h3>
+      </a>
+
+      <a href="#" class="article-card">
+        <img src="img/artikel-2.svg" alt="" class="article-thumb">
+        <p class="text-xs text-teal/50 mt-4">12 SEP 2026</p>
+        <h3 class="font-display font-600 text-base mt-1">Membaca Kota Lewat Poster</h3>
+      </a>
+
+      <a href="#" class="article-card">
+        <img src="img/artikel-3.svg" alt="" class="article-thumb">
+        <p class="text-xs text-teal/50 mt-4">04 SEP 2026</p>
+        <h3 class="font-display font-600 text-base mt-1">Dari Ide Kecil Jadi Gerakan</h3>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ KRITIK & SARAN ============ -->
+<section id="kritik" class="bg-coral py-20 text-white">
+  <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-start">
+    <div>
+      <span class="text-white/80 font-semibold text-sm tracking-wide">KRITIK &amp; SARAN</span>
+      <h2 class="font-display font-600 text-3xl mt-2 mb-4">Punya ide, unek-unek, atau kolaborasi seru?</h2>
+      <p class="text-white/85 leading-relaxed">
+        Kami membaca semua pesan yang masuk. Ceritakan apa yang ingin kamu lihat dari BUSTER CLUB berikutnya.
+      </p>
+    </div>
+
+    <div class="bg-white text-teal rounded-3xl p-6 md:p-8">
+      <form id="critique-form" class="space-y-4" novalidate>
+        <div>
+          <label for="critique-name" class="block text-sm font-semibold mb-1">Nama (opsional)</label>
+          <input type="text" id="critique-name" name="name" placeholder="Nama kamu"
+                 class="w-full border border-teal/15 rounded-xl px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-coral/50">
+        </div>
+        <div>
+          <label for="critique-email" class="block text-sm font-semibold mb-1">Email</label>
+          <input type="email" id="critique-email" name="email" placeholder="nama@email.com"
+                 class="w-full border border-teal/15 rounded-xl px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-coral/50">
+        </div>
+        <div>
+          <label class="block text-sm font-semibold mb-2">Rating pengalaman kamu</label>
+          <div id="critique-rating" class="flex gap-1 text-2xl" role="radiogroup" aria-label="Rating">
+            <button type="button" class="rating-star" data-value="1" aria-label="1 bintang">★</button>
+            <button type="button" class="rating-star" data-value="2" aria-label="2 bintang">★</button>
+            <button type="button" class="rating-star" data-value="3" aria-label="3 bintang">★</button>
+            <button type="button" class="rating-star" data-value="4" aria-label="4 bintang">★</button>
+            <button type="button" class="rating-star" data-value="5" aria-label="5 bintang">★</button>
+          </div>
+          <input type="hidden" id="critique-rating-value" name="rating" value="0">
+        </div>
+        <div>
+          <label for="critique-message" class="block text-sm font-semibold mb-1">Kritik &amp; saran</label>
+          <textarea id="critique-message" name="message" rows="4" required placeholder="Tulis di sini..."
+                    class="w-full border border-teal/15 rounded-xl px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-coral/50"></textarea>
+        </div>
+        <button type="submit"
+                class="w-full bg-teal text-white font-semibold py-3 rounded-xl hover:bg-teal/90 transition-colors">
+          Kirim masukan
+        </button>
+        <p id="critique-status" class="text-sm text-leaf font-medium hidden">Terima kasih! Masukanmu sudah tersimpan.</p>
+      </form>
+
+      <div class="mt-6 pt-6 border-t border-teal/10">
+        <div class="flex items-center justify-between mb-3">
+          <p class="text-sm font-semibold">Masukan tersimpan (lokal)</p>
+          <button id="export-critique" class="text-xs text-coral font-semibold hover:underline">Export JSON</button>
+        </div>
+        <ul id="critique-list" class="space-y-2 max-h-40 overflow-y-auto text-sm text-teal/70"></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-teal text-white py-14">
+  <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+    <div class="text-center md:text-left">
+      <p class="font-display font-600 text-lg">BUSTER CLUB</p>
+      <p class="text-sm text-white/60 mt-1">Ruang publikasi, eksperimen, dan cerita baik dari komunitas.</p>
+    </div>
+    <div class="flex items-center gap-5 text-xl">
+      <a href="#" aria-label="Instagram" class="hover:text-golden transition-colors">📷</a>
+      <a href="#" aria-label="TikTok" class="hover:text-golden transition-colors">🎵</a>
+      <a href="#" aria-label="YouTube" class="hover:text-golden transition-colors">▶️</a>
+    </div>
+    <a href="mailto:halo@busterclub.id" class="text-golden text-sm hover:underline">halo@busterclub.id</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
